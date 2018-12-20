@@ -1,0 +1,14 @@
+- block:
+
+  - name: Copy home directory Files
+    copy:
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+    with_items:
+      - "{{ HOMEDIR_TARGETS }}"
+
+  - name: Create ~/bin/
+    shell: mkdir ~/bin/
+    
+  - name: Git-Foresta Download
+    shell: curl -L https://github.com/takaaki-kasai/git-foresta/raw/master/git-foresta -o ~/bin/git-foresta && chmod +x ~/bin/git-foresta

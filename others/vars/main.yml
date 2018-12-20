@@ -1,0 +1,4 @@
+HOMEDIR_TARGETS:
+  - { src: .hyper.js, dest: ~/ }
+  - { src: .hyper_pulgins/package.json, dest: ~/.hyper_pulgins/ }
+  - { src: .zshrc, dest: ~/ }

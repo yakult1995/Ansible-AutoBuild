@@ -1,0 +1,20 @@
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+settings:
+  - { domain: com.apple.finder, key: CreateDesktop, type: bool, value: FALSE}
+  - { domain: com.apple.finder, key: ShowStatusBar, type: bool, value: TRUE}
+  - { domain: com.apple.finder, key: ShowPathbar, type: bool, value: TRUE}
+  - { domain: com.apple.finder, key: FXEnableExtensionChangeWarning, type: bool, value: FALSE}
+  - { domain: com.apple.finder, key: AppleShowAllFiles, type: string, value: TRUE }
+  - { domain: com.apple.dock, key: tilesize, type: int, value: 20 }
+  - { domain: com.apple.dock, key: persistent-apps, type: array, value: []}
+  - { domain: com.apple.dock, key: autohide, type: bool, value: TRUE }
+  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: Clicking, type: bool, value: TRUE}
+  - { domain: com.apple.LaunchServices, key: LSQuarantine, type: bool, value: FALSE}
+  - { domain: com.apple.screensaver, key: askForPassword, type: int, value: 1}
+  - { domain: com.apple.screensaver, key: askForPasswordDelay, type: int, value: 0}
+  - { domain: com.apple.menuextra.battery, key: ShowPercent, type: string, value: YES }
+  - { domain: com.apple.dashboard, key: mcx-disabled, type: bool, value: TRUE}
+  - { domain: NSGlobalDomain, key: AppleShowAllExtensions, type: bool, value: TRUE }
+  - { domain: NSGlobalDomain, key: NSAutomaticCapitalizationEnabled, type: bool, value: FALSE }
+  - { domain: NSGlobalDomain, key: NSAutomaticSpellingCorrectionEnabled, type: bool, value: FALSE }
+
