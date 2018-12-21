@@ -4,6 +4,7 @@
     # - { role: brew, tags: [brew] }
     # - { role: homebrew, tags: [homebrew] }
     # - { role: homebrew_cask, tags: [homebrew_cask] }
+    - { role: mas, tags: [mas] }
     - { role: macos, tags: [macos] }
     # - { role: fonts, tags: [fonts] }
     - { role: others, tags: [others] }
