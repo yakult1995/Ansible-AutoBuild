@@ -11,8 +11,15 @@
     shell: chsh -s /bin/zsh
 
   - name: Create ~/bin/
-    shell: mkdir ~/bin/
-    ignore_errors: yes
+    file:
+      path: ~/bin
+      state: directory
+      mode: 0755
     
   - name: Git-Foresta Download
-    shell: curl -L https://github.com/takaaki-kasai/git-foresta/raw/master/git-foresta -o ~/bin/git-foresta && chmod +x ~/bin/git-foresta
+    get_url:
+      url: https://github.com/takaaki-kasai/git-foresta/raw/master/git-foresta
+      dest: ~/bin/git-foresta
+    
+  - name: Add Execute for git-foresta
+    shell: chmod +x ~/bin/git-foresta
