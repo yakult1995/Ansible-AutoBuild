@@ -1,2 +1,3 @@
 PIP_MODULES:
   - { name: "pipenv" }
+  - { name: "ansible" }

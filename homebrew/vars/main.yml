@@ -2,7 +2,9 @@ taps:
   - homebrew/cask
 
 packages:
-  - { name: ansible, state: present }
+  - { name: openssl, state: present }
+  - { name: pyenv-virtualenv, state: present }
+  - { name: pyenv, state: present }
   - { name: awscli, state: present }
   - { name: git, state: present }
   - { name: jq, state: present }
@@ -12,3 +14,4 @@ packages:
   - { name: curl, state: present }
   - { name: wget, state: present }
   - { name: peco, state: present }
+  - { name: zsh, state: present }

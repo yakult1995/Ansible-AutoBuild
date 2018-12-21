@@ -7,8 +7,12 @@
     with_items:
       - "{{ HOMEDIR_TARGETS }}"
 
+  - name: Change Shell to zsh
+    shell: chsh -s /bin/zsh
+
   - name: Create ~/bin/
     shell: mkdir ~/bin/
+    ignore_errors: yes
     
   - name: Git-Foresta Download
     shell: curl -L https://github.com/takaaki-kasai/git-foresta/raw/master/git-foresta -o ~/bin/git-foresta && chmod +x ~/bin/git-foresta

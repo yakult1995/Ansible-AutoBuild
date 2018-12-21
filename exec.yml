@@ -1,9 +1,10 @@
 - hosts: localhost
   connection: local
   roles:
-    - { role: homebrew, tags: [homebrew] }
-    - { role: homebrew_cask, tags: [homebrew_cask] }
+    # - { role: brew, tags: [brew] }
+    # - { role: homebrew, tags: [homebrew] }
+    # - { role: homebrew_cask, tags: [homebrew_cask] }
     - { role: macos, tags: [macos] }
-    - { role: fonts, tags: [fonts] }
+    # - { role: fonts, tags: [fonts] }
     - { role: others, tags: [others] }
-    - { role: pip, tags: [pip] }
+    # - { role: pip, tags: [pip] }

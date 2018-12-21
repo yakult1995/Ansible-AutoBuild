@@ -14,6 +14,3 @@ then
   echo "install ansible"
   sudo pip install ansible
 fi
-
-sudo xcodebuild -license accept
-xcode-select --install

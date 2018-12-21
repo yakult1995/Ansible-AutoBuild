@@ -4,7 +4,7 @@
 alias ga='git add -A'
 alias gc='git commit -m'
 alias gs='git status'
-alias gl="~/git-foresta/git-foresta --all --style=10 | less -RSX"
+alias gl="~/bin/git-foresta/git-foresta --all --style=10 | less -RSX"
 alias push='git push'
 alias pull='git pull'
 

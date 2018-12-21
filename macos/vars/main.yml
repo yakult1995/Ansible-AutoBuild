@@ -1,20 +1,59 @@
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+# https://amasuda.xyz/post/2016-10-23-mastering-mac-defaults-command/
+# https://www.defaults-write.com/
 settings:
+  # Desktopのファイルを非表示
   - { domain: com.apple.finder, key: CreateDesktop, type: bool, value: FALSE}
+  # Finderでステータスバーの表示
   - { domain: com.apple.finder, key: ShowStatusBar, type: bool, value: TRUE}
+  # Finderで下にPathの表示
   - { domain: com.apple.finder, key: ShowPathbar, type: bool, value: TRUE}
+  # 拡張子を変更するときの警告無視
   - { domain: com.apple.finder, key: FXEnableExtensionChangeWarning, type: bool, value: FALSE}
+  # Finderで隠しファイルも表示する
   - { domain: com.apple.finder, key: AppleShowAllFiles, type: string, value: TRUE }
+  - { domain: NSGlobalDomain, key: AppleShowAllExtensions, type: bool, value: TRUE }
+  # Finderの初期フォルダをhomeに設定
+  - { domain: com.apple.finder, key: NewWindowTarget, type: string, value: "PfDe" }
+  - { domain: com.apple.finder, key: NewWindowTargetPath, type: string, value: "file://${HOME}/" }
+  # Dockのサイズ変更
   - { domain: com.apple.dock, key: tilesize, type: int, value: 20 }
+  # Dockの初期表示アプリを削除
   - { domain: com.apple.dock, key: persistent-apps, type: array, value: []}
+  # Dockを自動非表示
   - { domain: com.apple.dock, key: autohide, type: bool, value: TRUE }
-  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: Clicking, type: bool, value: TRUE}
+  # Dockのアイコンにカーソルを合わせた時に拡大・サイズ指定
+  - { domain: com.apple.dock, key: magnification, type: bool, value: TRUE }
+  - { domain: com.apple.dock, key: largesize, type: int, value: 70 }
+  # TrackPadで３本指で移動
+  # - { domain: com.apple.AppleMultitouchTrackpad, key: TrackpadThreeFingerVertSwipeGesture, type: int, value: 1 }
+  - { domain: com.apple.AppleMultitouchTrackpad, key: TrackpadThreeFingerDrag, type: int, value: 1 }
+  - { domain: com.apple.AppleMultitouchTrackpad, key: Clicking, type: int, value: 1 }
+  # TrackPadでタッチでクリック設定
+  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: Clicking, type: int, value: 1}
+  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: TrackpadThreeFingerTapGesture, type: int, value: 2}
+  - { domain: com.apple.driver.AppleMultitouchTrackpad, key: Clicking, type: int, value: 1}
+  - { domain: com.apple.driver.AppleMultitouchTrackpad, key: TrackpadThreeFingerTapGesture, type: int, value: 2}
+  - { domain: NSGlobalDomain, key: com.apple.mouse.tapBehavior, type: int, value: 1 }
+  # TrackPadの移動速度指定
+  - { domain: NSGlobalDomain, key: com.apple.trackpad.scaling, type: float, value: 7 }
+  # ダウンロードしたアプリを開いたときの警告無視
   - { domain: com.apple.LaunchServices, key: LSQuarantine, type: bool, value: FALSE}
+  # スクリーンを解除する時にパスワードの要求
   - { domain: com.apple.screensaver, key: askForPassword, type: int, value: 1}
   - { domain: com.apple.screensaver, key: askForPasswordDelay, type: int, value: 0}
+  # バッテリーを%表示
   - { domain: com.apple.menuextra.battery, key: ShowPercent, type: string, value: YES }
+  # ダッシュボードの無効化 
   - { domain: com.apple.dashboard, key: mcx-disabled, type: bool, value: TRUE}
-  - { domain: NSGlobalDomain, key: AppleShowAllExtensions, type: bool, value: TRUE }
+  # 自動で大文字化する機能無効化
   - { domain: NSGlobalDomain, key: NSAutomaticCapitalizationEnabled, type: bool, value: FALSE }
+  # スペルチェック無効化
   - { domain: NSGlobalDomain, key: NSAutomaticSpellingCorrectionEnabled, type: bool, value: FALSE }
-
+  # メニューバーの日付表示形式指定
+  - { domain: com.apple.menuextra.clock, key: DateFormat, type: string, value: "yyyy年 MM月dd日(E) a hh時mm分ss秒" }
+  # ファイルの保存画面の変更
+  - { domain: NSGlobalDomain, key: NSNavPanelExpandedStateForSaveMode, type: bool, value: TRUE}
+  - { domain: NSGlobalDomain, key: NSNavPanelExpandedStateForSaveMode2, type: bool, value: TRUE}
+  # スクリーンショットで日付を入れない
+  - { domain: com.apple.screencapture, key: include-date, type: int, value: 0 } 
