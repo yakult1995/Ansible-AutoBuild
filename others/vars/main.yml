@@ -1,6 +1,5 @@
 HOMEDIR_TARGETS:
   - { src: .hyper.js, dest: ~/ }
   - { src: .hyper_plugins/package.json, dest: ~/.hyper_plugins/ }
-  - { src: .zshrc, dest: ~/ }
   - { src: .gitconfig, dest: ~/ }
   - { src: GoldenChaos-BTT 2.669.bttpreset, dest: ~/Desktop/}

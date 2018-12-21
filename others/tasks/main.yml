@@ -7,6 +7,9 @@
     with_items:
       - "{{ HOMEDIR_TARGETS }}"
 
+  - name: zsh Config Load
+    shell: ln -s OneDrive/dotfiles/zshrc ~/.zshrc
+
   - name: Sublime Text3 Config Load 1
     shell: ln -s ~/OneDrive/Sublime\ Text\ 3/Installed\ Packages ~/Library/Application\ Support/Sublime\ Text\ 3/
     
