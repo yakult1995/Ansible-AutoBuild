@@ -7,6 +7,12 @@
     with_items:
       - "{{ HOMEDIR_TARGETS }}"
 
+  - name: Sublime Text3 Config Load 1
+    shell: ln -s ~/OneDrive/Sublime\ Text\ 3/Installed\ Packages ~/Library/Application\ Support/Sublime\ Text\ 3/
+    
+  - name: Sublime Text3 Config Load 2
+    shell: ln -s ~/OneDrive/Sublime\ Text\ 3/Packages ~/Library/Application\ Support/Sublime\ Text\ 3/
+
   - name: Change Shell to zsh
     shell: chsh -s /bin/zsh
 
