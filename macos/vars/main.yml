@@ -57,3 +57,5 @@ settings:
   - { domain: NSGlobalDomain, key: NSNavPanelExpandedStateForSaveMode2, type: bool, value: TRUE}
   # スクリーンショットで日付を入れない
   - { domain: com.apple.screencapture, key: include-date, type: int, value: 0 } 
+  # MissionControlでデスクトップの順番が入れ替わるの禁止
+  - { domain: com.apple.dock, key: mru-spaces, type: bool, value: FALSE}
