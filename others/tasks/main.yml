@@ -9,15 +9,21 @@
 
   - name: zsh Config Load
     shell: ln -s OneDrive/dotfiles/zshrc ~/.zshrc
-
-  - name: Sublime Text3 Config Load 1
-    shell: ln -s ~/OneDrive/Sublime\ Text\ 3/Installed\ Packages ~/Library/Application\ Support/Sublime\ Text\ 3/
-    
-  - name: Sublime Text3 Config Load 2
-    shell: ln -s ~/OneDrive/Sublime\ Text\ 3/Packages ~/Library/Application\ Support/Sublime\ Text\ 3/
+    ignore_errors: yes
 
   - name: Change Shell to zsh
     shell: chsh -s /bin/zsh
+
+  - name: Create ~/.ndenv/plugins
+    file:
+      path: ~/.ndenv/plugins
+      state: directory
+      mode: 0755
+
+  - name: ndenv-build Install
+    git:
+      repo: https://github.com/riywo/node-build.git
+      dest: ~/.ndenv/plugins/node-build
 
   - name: Create ~/bin/
     file:
@@ -32,3 +38,14 @@
     
   - name: Add Execute for git-foresta
     shell: chmod +x ~/bin/git-foresta
+
+  - name: Sublime Text3 Config Load 1
+    shell: ln -s ~/OneDrive/Sublime\ Text\ 3/Installed\ Packages ~/Library/Application\ Support/Sublime\ Text\ 3/
+    ignore_errors: yes
+    
+  - name: Sublime Text3 Config Load 2
+    shell: ln -s ~/OneDrive/Sublime\ Text\ 3/Packages ~/Library/Application\ Support/Sublime\ Text\ 3/
+    ignore_errors: yes
+
+  - name: zsh Load
+    shell: /bin/zsh -lc "source ~/.zshrc"
