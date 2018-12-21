@@ -41,7 +41,7 @@ setopt correct # コマンドのスペルチェックを有効に
 # -------------------------------------
 # 履歴
 # -------------------------------------
-HISTFILE=~/.zsh_history # historyファイル
+HISTFILE=~/.shell_history # historyファイル
 HISTFILESIZE=1000000
 HISTSIZE=1000000 # ファイルサイズ
 SAVEHIST=1000000 # saveする量
