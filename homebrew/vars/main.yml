@@ -5,6 +5,7 @@ packages:
   - { name: openssl, state: present }
   - { name: pyenv-virtualenv, state: present }
   - { name: pyenv, state: present }
+  - { name: ndenv, state: present }
   - { name: awscli, state: present }
   - { name: git, state: present }
   - { name: jq, state: present }
