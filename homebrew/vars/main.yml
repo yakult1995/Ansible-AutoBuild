@@ -16,3 +16,4 @@ packages:
   - { name: wget, state: present }
   - { name: peco, state: present }
   - { name: zsh, state: present }
+  - { name: mongodb, state: present }
