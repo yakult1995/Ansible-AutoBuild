@@ -1,0 +1,18 @@
+- block:
+  
+  # - name: Minikube Install
+  #   shell: curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.27.0/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+
+  - name: Minikube Download
+    get_url:
+      url: https://storage.googleapis.com/minikube/releases/v0.27.0/minikube-darwin-amd64
+      dest: ~/Downloads/
+
+  - name: Rename Minikube
+    shell: mv ~/Downloads/minikube-darwin-amd64 ~/Downloads/minikube
+
+  - name: Add Right
+    shell: chmod +x ~/Downloads/minikube
+
+  - name: Move Minikube to /usr/local/bin
+    shell: sudo mv ~/Downloads/minikube /usr/local/bin/
