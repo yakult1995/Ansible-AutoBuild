@@ -24,3 +24,4 @@ homebrew_cask_packages:
   - { name: hyper }
   - { name: franz }
   - { name: tableplus }
+  - { name: sequel-pro }
