@@ -9,6 +9,10 @@ homebrew_cask_packages:
   - { name: OneDrive }
   - { name: duet }
   - { name: pycharm }
+  - { name: clion }
+  - { name: intellij-idea }
+  - { name: phpstorm }
+  - { name: rubymine }
   - { name: webstorm}
   - { name: sublime-text }
   - { name: virtualbox }
