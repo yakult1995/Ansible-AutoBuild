@@ -17,3 +17,4 @@ packages:
   - { name: peco, state: present }
   - { name: zsh, state: present }
   - { name: mongodb, state: present }
+  - { name: mysql-connector-c, state: present }
