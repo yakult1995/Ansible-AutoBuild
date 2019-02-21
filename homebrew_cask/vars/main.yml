@@ -25,3 +25,4 @@ homebrew_cask_packages:
   - { name: franz }
   - { name: tableplus }
   - { name: sequel-pro }
+  - { name: ngrok }
