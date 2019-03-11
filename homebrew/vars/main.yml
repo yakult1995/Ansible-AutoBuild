@@ -18,3 +18,4 @@ packages:
   - { name: zsh, state: present }
   - { name: mongodb, state: present }
   - { name: mysql-connector-c, state: present }
+  - { name: terraform, state: present }
