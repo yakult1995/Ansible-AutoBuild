@@ -20,4 +20,7 @@ packages:
   - { name: mysql-connector-c, state: present }
   - { name: terraform, state: present }
   - { name: packer, state: present }
+  - { name: rbenv, state: present }
+  - { name: ruby-build, state: present }
+  - { name: neovim/neovim/neovim, state: present }
 
