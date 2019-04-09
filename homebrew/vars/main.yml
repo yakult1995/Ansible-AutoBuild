@@ -23,4 +23,5 @@ packages:
   - { name: rbenv, state: present }
   - { name: ruby-build, state: present }
   - { name: neovim/neovim/neovim, state: present }
+  - { name: go, state: present }
 
