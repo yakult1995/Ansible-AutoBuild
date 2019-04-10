@@ -24,4 +24,5 @@ packages:
   - { name: ruby-build, state: present }
   - { name: neovim/neovim/neovim, state: present }
   - { name: go, state: present }
+  - { name: pgweb, state: present }
 
