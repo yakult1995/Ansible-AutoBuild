@@ -26,4 +26,5 @@ packages:
   - { name: go, state: present }
   - { name: pgweb, state: present }
   - { name: dep, state: present }
+  - { name: nmap, state: present }
 
