@@ -18,3 +18,4 @@ packages:
   - { name: packer, state: present }
   - { name: dep, state: present }
   - { name: nmap, state: present }
+  - { name: anyenv, state: present }

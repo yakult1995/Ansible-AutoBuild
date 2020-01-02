@@ -1,4 +1,6 @@
 - block:
+  - name: Init anyenv
+    shell: anyenv init
 
   - name: zsh Config Load
     shell: ln -s ~/Dropbox/dotfiles/zshrc ~/.zshrc
