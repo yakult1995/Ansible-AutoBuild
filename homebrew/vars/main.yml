@@ -3,9 +3,6 @@ taps:
 
 packages:
   - { name: openssl, state: present }
-  - { name: pyenv-virtualenv, state: present }
-  - { name: pyenv, state: present }
-  - { name: ndenv, state: present }
   - { name: awscli, state: present }
   - { name: git, state: present }
   - { name: jq, state: present }
@@ -16,15 +13,8 @@ packages:
   - { name: wget, state: present }
   - { name: peco, state: present }
   - { name: zsh, state: present }
-  - { name: mongodb, state: present }
   - { name: mysql-connector-c, state: present }
   - { name: terraform, state: present }
   - { name: packer, state: present }
-  - { name: rbenv, state: present }
-  - { name: ruby-build, state: present }
-  - { name: neovim/neovim/neovim, state: present }
-  - { name: go, state: present }
-  - { name: pgweb, state: present }
   - { name: dep, state: present }
   - { name: nmap, state: present }
-  - { name: fzy, state: present }
