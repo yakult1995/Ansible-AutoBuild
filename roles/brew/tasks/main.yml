@@ -1,14 +1,15 @@
+---
 - name: update brew
-  register: result
+  register: existsBrew
   ignore_errors: True
-  command: >
-    brew update
+  command: brew update
 
 - name: get brew installer
-  get_url: url=https://raw.githubusercontent.com/Homebrew/install/master/install dest=/tmp/brew_install
-  when: result|failed
+  get_url: 
+    url: https://raw.githubusercontent.com/Homebrew/install/master/install
+    dest: /tmp/brew_install
+  when: '"RAILED" in existsBrew'
 
 - name: proceed brew installer
-  command: >
-    ruby /tmp/brew_install
-  when: result|failed
+  command: ruby /tmp/brew_install
+  when: '"RAILED" in existsBrew'

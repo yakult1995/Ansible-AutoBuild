@@ -1,20 +1,20 @@
 ---
 - name: Init anyenv
-    shell: anyenv init
+  shell: anyenv init
 
-  - name: Change Shell to zsh
-    shell: chsh -s /bin/zsh
+- name: Change Shell to zsh
+  shell: chsh -s /bin/zsh
 
-  - name: Create ~/bin/
-    file:
-      path: ~/bin
-      state: directory
-      mode: 0755
+- name: Create ~/bin/
+  file:
+    path: ~/bin
+    state: directory
+    mode: 0755
 
-  - name: Git-Foresta Download
-    get_url:
-      url: https://github.com/takaaki-kasai/git-foresta/raw/master/git-foresta
-      dest: ~/bin/git-foresta
+- name: Git-Foresta Download
+  get_url:
+    url: https://github.com/takaaki-kasai/git-foresta/raw/master/git-foresta
+    dest: ~/bin/git-foresta
 
-  - name: Add Execute for git-foresta
-    shell: chmod +x ~/bin/git-foresta
+- name: Add Execute for git-foresta
+  shell: chmod +x ~/bin/git-foresta
