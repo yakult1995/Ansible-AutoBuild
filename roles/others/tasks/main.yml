@@ -1,10 +1,6 @@
-- block:
-  - name: Init anyenv
+---
+- name: Init anyenv
     shell: anyenv init
-
-  - name: zsh Config Load
-    shell: ln -s ~/Dropbox/dotfiles/zshrc ~/.zshrc
-    ignore_errors: yes
 
   - name: Change Shell to zsh
     shell: chsh -s /bin/zsh
@@ -22,6 +18,3 @@
 
   - name: Add Execute for git-foresta
     shell: chmod +x ~/bin/git-foresta
-
-  - name: zsh Load
-    shell: /bin/zsh -lc "source ~/.zshrc"
