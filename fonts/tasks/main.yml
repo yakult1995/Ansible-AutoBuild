@@ -16,6 +16,14 @@
   - name: Unzip Source Han Code JP
     raw: tar zxvf ~/Downloads/2.000R.tar.gz  -C ~/Library/Fonts/
 
+  - name: Download cica
+    get_url:
+      url: https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip
+      dest: ~/Downloads/cica.zip
+
+  - name: Unzip cica
+    raw: unzip ~/Downloads/cica.zip -d ~/Library/Fonts/
+
   - name: mv *.otf to  ~/Library/Fonts/
     copy:
       src: "{{ item }}"
