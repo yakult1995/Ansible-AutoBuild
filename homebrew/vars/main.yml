@@ -1,5 +1,6 @@
 taps:
   - homebrew/cask
+  - trendyol/trendyol-tap
 
 packages:
   - { name: openssl, state: present }
@@ -19,3 +20,4 @@ packages:
   - { name: dep, state: present }
   - { name: nmap, state: present }
   - { name: anyenv, state: present }
+  - { name: docker-shell, state: present }
