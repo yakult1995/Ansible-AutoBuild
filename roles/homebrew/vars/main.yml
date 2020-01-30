@@ -21,3 +21,7 @@ packages:
   - { name: nmap, state: present }
   - { name: anyenv, state: present }
   - { name: docker-shell, state: present }
+  - { name: k9s, state: present }
+  - { name: kubernetes-cli, state: present }
+  - { name: tmux, state: present }
+  - { name: vim, state: present }
