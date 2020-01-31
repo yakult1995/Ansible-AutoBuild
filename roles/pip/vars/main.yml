@@ -1,2 +1,0 @@
-PIP_MODULES:
-  - { name: "pipenv" }
