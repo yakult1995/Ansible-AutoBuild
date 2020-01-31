@@ -25,3 +25,4 @@ packages:
   - { name: kubernetes-cli, state: present }
   - { name: tmux, state: present }
   - { name: vim, state: present }
+  - { name: ccat, state: present }
