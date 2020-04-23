@@ -8,10 +8,10 @@ then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-sudo which ansible >/dev/null 2>&1
+which ansible >/dev/null 2>&1
 if [ $? -ne 0 ];
 then
   echo "not found command ansible"
   echo "install ansible"
-  sudo brew install ansible
+  brew install ansible
 fi

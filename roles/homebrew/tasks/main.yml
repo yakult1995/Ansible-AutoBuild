@@ -12,6 +12,7 @@
     with_items: "{{ taps }}"
 
   - name: homebrew packages install
+    ignore_errors: yes
     homebrew:
       name: "{{ item.name }}"
       state: "{{ item.state | default('present') }}"
