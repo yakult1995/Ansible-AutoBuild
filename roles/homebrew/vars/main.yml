@@ -3,28 +3,22 @@ taps:
   - trendyol/trendyol-tap
 
 packages:
-  - { name: openssl, state: present }
   - { name: awscli, state: present }
-  - { name: git, state: present }
   - { name: jq, state: present }
   - { name: mas, state: present } # mas-cli(mac apple store)
   - { name: tree, state: present }
-  - { name: fontconfig, state: present }  # for fc-cache
+  - { name: fontconfig, state: present } # for fc-cache
   - { name: curl, state: present }
   - { name: wget, state: present }
   - { name: peco, state: present }
   - { name: zsh, state: present }
-  - { name: mysql-connector-c, state: present }
-  - { name: terraform, state: present }
   - { name: packer, state: present }
-  - { name: dep, state: present }
   - { name: nmap, state: present }
   - { name: anyenv, state: present }
   - { name: docker, state: present }
   - { name: docker-compose, state: present }
   - { name: docker-shell, state: present }
   - { name: k9s, state: present }
-  - { name: kubernetes-cli, state: present }
   - { name: tmux, state: present }
   - { name: vim, state: present }
   - { name: ccat, state: present }

@@ -4,4 +4,3 @@ homebrew_cask_packages:
   - { name: alfred }
   - { name: slack }
   - { name: google-chrome }
-  - { name: adobe-creative-cloud }

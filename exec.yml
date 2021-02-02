@@ -1,12 +1,8 @@
-# ansible-playbook exec.yml -vv
-
 - hosts: localhost
   connection: local
   roles:
-    - { role: brew, tags: [brew] }
-    - { role: homebrew, tags: [homebrew] }
-    - { role: mas, tags: [mas] }
-    - { role: macos, tags: [macos] }
-    - { role: fonts, tags: [fonts] }
-    - { role: others, tags: [others] }
-    - { role: homebrew_cask, tags: [homebrew_cask] }
+    - role: homebrew
+    - role: homebrew_cask
+    - role: macos
+    - role: fonts
+    - role: others

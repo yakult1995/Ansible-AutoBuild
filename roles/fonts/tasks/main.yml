@@ -1,35 +1,42 @@
 - block:
+    - name: download ricty
+      get_url:
+        url: http://www.rs.tus.ac.jp/yyusa/ricty_diminished/ricty_diminished-4.1.1.tar.gz
+        dest: ~/Downloads/ricty_diminished-4.1.1.tar.gz
 
-  - name: Download ricty
-    get_url:
-      url: http://www.rs.tus.ac.jp/yyusa/ricty_diminished/ricty_diminished-4.1.1.tar.gz
-      dest: ~/Downloads/ricty_diminished-4.1.1.tar.gz
+    - name: unzip ricty
+      raw: tar zxvf ~/Downloads/ricty_diminished-4.1.1.tar.gz -C ~/Library/Fonts/
 
-  - name: Unzip ricty
-    raw: tar zxvf ~/Downloads/ricty_diminished-4.1.1.tar.gz -C ~/Library/Fonts/
+    - name: download Source Han Code JP
+      get_url:
+        url: https://github.com/adobe-fonts/source-han-code-jp/archive/2.000R.tar.gz
+        dest: ~/Downloads/2.000R.tar.gz
 
-  - name: Download Source Han Code JP
-    get_url:
-      url: https://github.com/adobe-fonts/source-han-code-jp/archive/2.000R.tar.gz
-      dest: ~/Downloads/2.000R.tar.gz
+    - name: unzip Source Han Code JP
+      raw: tar zxvf ~/Downloads/2.000R.tar.gz  -C ~/Library/Fonts/
 
-  - name: Unzip Source Han Code JP
-    raw: tar zxvf ~/Downloads/2.000R.tar.gz  -C ~/Library/Fonts/
+    - name: download cica
+      get_url:
+        url: https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip
+        dest: ~/Downloads/cica.zip
 
-  - name: Download cica
-    get_url:
-      url: https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip
-      dest: ~/Downloads/cica.zip
+    - name: unzip cica
+      raw: unzip ~/Downloads/cica.zip -d ~/Library/Fonts/
 
-  - name: Unzip cica
-    raw: unzip ~/Downloads/cica.zip -d ~/Library/Fonts/
+    - name: mv *.otf to  ~/Library/Fonts/
+      copy:
+        src: "{{ item }}"
+        dest: "~/Library/Fonts"
+      with_fileglob:
+        - ~/Library/Fonts/source-han-code-jp-2.000R/OTF/*.otf
 
-  - name: mv *.otf to  ~/Library/Fonts/
-    copy:
-      src: "{{ item }}"
-      dest: "~/Library/Fonts"
-    with_fileglob:
-      - ~/Library/Fonts/source-han-code-jp-2.000R/OTF/*.otf
+    - name: download monoid
+      get_url:
+        url: https://github.com/larsenwork/monoid/archive/0.61.zip
+        dest: ~/Downloads/monoid.zip
 
-  - name: fc-cache
-    raw: fc-cache -vf
+    - name: unzip monoid
+      raw: unzip ~/Downloads/monoid.zip -d ~/Library/Fonts/
+
+    - name: fc-cache
+      raw: fc-cache -vf

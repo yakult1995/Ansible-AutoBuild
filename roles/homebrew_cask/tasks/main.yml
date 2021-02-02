@@ -1,8 +1,6 @@
 - block:
-  
-  - name: Install cask packages
-    homebrew_cask:
-      name={{ item.name }}
-      state={{ item.state | default('present') }}
-    with_items:
-      - "{{ homebrew_cask_packages }}"
+    - name: Install cask packages
+      homebrew_cask: name={{ item.name }}
+        state={{ item.state | default('present') }}
+      with_items:
+        - "{{ homebrew_cask_packages }}"
